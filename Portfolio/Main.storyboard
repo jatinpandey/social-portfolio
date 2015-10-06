@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="DdX-pu-6fd">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Jatin-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hbz-FE-ewA">
+                                <rect key="frame" x="85" y="132" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Yc5-Q4-vTV"/>
+                                    <constraint firstAttribute="width" constant="150" id="cUD-t0-F1X"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2w-vk-389">
+                                <rect key="frame" x="37" y="318" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="99U-rs-VVU"/>
+                                    <constraint firstAttribute="width" constant="64" id="NIN-95-BXD"/>
+                                </constraints>
+                                <state key="normal" image="linkedin"/>
+                                <connections>
+                                    <action selector="onPushLinkedIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1jM-76-NkW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAg-pY-ALY">
+                                <rect key="frame" x="126" y="317" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="OBZ-ie-ghm"/>
+                                    <constraint firstAttribute="width" constant="64" id="gib-dq-Bmn"/>
+                                </constraints>
+                                <state key="normal" image="github"/>
+                                <connections>
+                                    <action selector="onPushGithub:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LM6-LS-tWb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btr-Dt-Geg">
+                                <rect key="frame" x="214" y="317" width="69" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="Mn9-Sz-17i"/>
+                                    <constraint firstAttribute="height" constant="75" id="g3M-ia-lvG"/>
+                                </constraints>
+                                <state key="normal" image="twitter"/>
+                                <connections>
+                                    <action selector="onPushTwitter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qf4-Ln-NGy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hbz-FE-ewA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="68" id="3fT-aP-kde"/>
+                            <constraint firstItem="b2w-vk-389" firstAttribute="top" secondItem="hbz-FE-ewA" secondAttribute="bottom" constant="36" id="6v7-pF-0V2"/>
+                            <constraint firstItem="MAg-pY-ALY" firstAttribute="top" secondItem="hbz-FE-ewA" secondAttribute="bottom" constant="35" id="C4I-ab-ZLG"/>
+                            <constraint firstItem="MAg-pY-ALY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-2" id="EmB-nI-RJL"/>
+                            <constraint firstItem="btr-Dt-Geg" firstAttribute="top" secondItem="hbz-FE-ewA" secondAttribute="bottom" constant="35" id="Hva-Bg-k0u"/>
+                            <constraint firstItem="hbz-FE-ewA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LYt-di-hjM"/>
+                            <constraint firstItem="b2w-vk-389" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="17" id="aWj-Wi-rfV"/>
+                            <constraint firstItem="btr-Dt-Geg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-17" id="tpy-lF-lQr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Jatin" id="YY6-qM-7gN"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="hbz-FE-ewA" id="rOG-Ef-JLg"/>
+                        <segue destination="7M8-8u-SWU" kind="push" identifier="pushSocialSegue" id="qLj-gG-lEl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="335"/>
+        </scene>
+        <!--Social View Controller-->
+        <scene sceneID="6Vb-58-aJy">
+            <objects>
+                <viewController id="7M8-8u-SWU" customClass="SocialViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8vL-sH-uH8"/>
+                        <viewControllerLayoutGuide type="bottom" id="xml-8G-LIk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OBH-0e-OnA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGa-oA-0b4">
+                                <rect key="frame" x="16" y="0.0" width="288" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AGa-oA-0b4" firstAttribute="top" secondItem="OBH-0e-OnA" secondAttribute="topMargin" id="NfP-Tb-pxd"/>
+                            <constraint firstItem="xml-8G-LIk" firstAttribute="top" secondItem="AGa-oA-0b4" secondAttribute="bottom" id="Xac-uu-Lcd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AGa-oA-0b4" secondAttribute="trailing" id="hVy-Rt-nTo"/>
+                            <constraint firstItem="AGa-oA-0b4" firstAttribute="leading" secondItem="OBH-0e-OnA" secondAttribute="leadingMargin" id="ju3-or-EWd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="T3S-ol-6eT"/>
+                    <connections>
+                        <outlet property="socialWebView" destination="AGa-oA-0b4" id="fL9-DI-6u2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MpZ-py-Iq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1118" y="335"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="she-qv-IpA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DdX-pu-6fd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7A4-Up-bsh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XW1-Gd-nyK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4YR-rV-1Oe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="335"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="github" width="64" height="64"/>
+        <image name="linkedin" width="65" height="54"/>
+        <image name="twitter" width="1687" height="1687"/>
+    </resources>
+</document>

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HomeViewController.h
 //  Portfolio
 //
 //  Created by Jatin Pandey on 10/4/15.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface HomeViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIImageView *profileImageView;
 
 @end
-
